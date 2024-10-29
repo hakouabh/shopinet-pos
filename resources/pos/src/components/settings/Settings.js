@@ -130,11 +130,11 @@ const Settings = (props) => {
     const [selectedLanguage] = useState(
         newLanguages
             ? [
-                  {
-                      label: newLanguages[0].label,
-                      value: newLanguages[0].value,
-                  },
-              ]
+                {
+                    label: newLanguages[0].label,
+                    value: newLanguages[0].value,
+                },
+            ]
             : null
     );
 
@@ -142,11 +142,11 @@ const Settings = (props) => {
     const [selectedSms] = useState(
         newSms
             ? [
-                  {
-                      label: newSms[0].label,
-                      value: newSms[0].values,
-                  },
-              ]
+                {
+                    label: newSms[0].label,
+                    value: newSms[0].values,
+                },
+            ]
             : null
     );
 
@@ -163,9 +163,9 @@ const Settings = (props) => {
                 currency:
                     settings.attributes && settings.attributes.currency
                         ? {
-                              value: Number(settings.attributes.currency),
-                              label: settings.attributes.currency_symbol,
-                          }
+                            value: Number(settings.attributes.currency),
+                            label: settings.attributes.currency_symbol,
+                        }
                         : "",
                 currency_symbol:
                     settings.attributes && settings.attributes.currency_symbol
@@ -202,20 +202,20 @@ const Settings = (props) => {
                 default_customer:
                     settings.attributes && settings.attributes.default_customer
                         ? {
-                              value: Number(
-                                  settings.attributes.default_customer
-                              ),
-                              label: settings.attributes.customer_name,
-                          }
+                            value: Number(
+                                settings.attributes.default_customer
+                            ),
+                            label: settings.attributes.customer_name,
+                        }
                         : "",
                 default_warehouse:
                     settings.attributes && settings.attributes.default_warehouse
                         ? {
-                              value: Number(
-                                  settings.attributes.default_warehouse
-                              ),
-                              label: settings.attributes.warehouse_name,
-                          }
+                            value: Number(
+                                settings.attributes.default_warehouse
+                            ),
+                            label: settings.attributes.warehouse_name,
+                        }
                         : "",
                 warehouse_name:
                     settings.attributes && settings.attributes.warehouse_name
@@ -271,17 +271,17 @@ const Settings = (props) => {
                         : "",
                 show_version_on_footer:
                     settings.attributes &&
-                    settings.attributes.show_version_on_footer !== "1"
+                        settings.attributes.show_version_on_footer !== "1"
                         ? false
                         : true,
                 show_logo_in_receipt:
                     settings.attributes &&
-                    settings.attributes.show_logo_in_receipt !== "1"
+                        settings.attributes.show_logo_in_receipt !== "1"
                         ? false
                         : true,
                 show_app_name_in_sidebar:
                     settings.attributes &&
-                    settings.attributes.show_app_name_in_sidebar !== "1"
+                        settings.attributes.show_app_name_in_sidebar !== "1"
                         ? false
                         : true,
                 city:
@@ -294,36 +294,36 @@ const Settings = (props) => {
                         : "",
                 countries:
                     settings.attributes &&
-                    settings.attributes.countries &&
-                    byDefaultCountry
+                        settings.attributes.countries &&
+                        byDefaultCountry
                         ? {
-                              value: byDefaultCountry.id,
-                              label: byDefaultCountry.name,
-                          }
+                            value: byDefaultCountry.id,
+                            label: byDefaultCountry.name,
+                        }
                         : "",
                 country:
                     settings.attributes && settings.attributes.country
                         ? {
-                              value: settings.attributes.country,
-                              label: settings.attributes.country,
-                          }
+                            value: settings.attributes.country,
+                            label: settings.attributes.country,
+                        }
                         : "",
                 state:
                     settings.attributes && settings.attributes.country
                         ? {
-                              value: settings.attributes.state,
-                              label: settings.attributes.state,
-                          }
+                            value: settings.attributes.state,
+                            label: settings.attributes.state,
+                        }
                         : "",
                 date_format:
                     settings.attributes &&
-                    settings.attributes.date_format &&
-                    defaultDate
+                        settings.attributes.date_format &&
+                        defaultDate
                         ? { value: defaultDate.value, label: defaultDate.label }
                         : "",
                 Currency_icon_Right_side:
                     settings.attributes &&
-                    settings.attributes.is_currency_right !== "true"
+                        settings.attributes.is_currency_right !== "true"
                         ? false
                         : true,
             });
@@ -748,7 +748,7 @@ const Settings = (props) => {
                                                     defaultValue={
                                                         settings
                                                             ? settings.attributes &&
-                                                              settingValue.currency
+                                                            settingValue.currency
                                                             : ""
                                                     }
                                                     data={currencies}
@@ -789,8 +789,8 @@ const Settings = (props) => {
                                                     "Currency_icon_Right_side"
                                                 ]
                                                     ? errors[
-                                                          "Currency_icon_Right_side"
-                                                      ]
+                                                    "Currency_icon_Right_side"
+                                                    ]
                                                     : null}
                                             </span>
                                         </div>
@@ -828,7 +828,7 @@ const Settings = (props) => {
                                             imagePreviewUrl
                                                 ? imagePreviewUrl
                                                 : settings.attributes &&
-                                                  settings.attributes.logo
+                                                settings.attributes.logo
                                         }
                                         handleImageChange={handleImageChange}
                                     />
@@ -897,6 +897,7 @@ const Settings = (props) => {
                                             "settings.system-settings.input.developed-by.placeholder.label"
                                         )}
                                         name="developed"
+                                        disabled
                                         value={settingValue.developed}
                                         onChange={(e) => onChangeInput(e)}
                                     />
@@ -947,7 +948,7 @@ const Settings = (props) => {
                                                 defaultValue={
                                                     settings
                                                         ? settings.attributes &&
-                                                          settingValue.default_customer
+                                                        settingValue.default_customer
                                                         : ""
                                                 }
                                                 data={customers}
@@ -972,7 +973,7 @@ const Settings = (props) => {
                                                 defaultValue={
                                                     settings
                                                         ? settings.attributes &&
-                                                          settingValue.default_warehouse
+                                                        settingValue.default_warehouse
                                                         : ""
                                                 }
                                                 data={warehouses}
@@ -998,16 +999,16 @@ const Settings = (props) => {
                                                 )}
                                                 defaultValue={
                                                     settings &&
-                                                    settings.attributes &&
-                                                    byDefaultCountry
+                                                        settings.attributes &&
+                                                        byDefaultCountry
                                                         ? {
-                                                              label: settingValue
-                                                                  .country
-                                                                  .label,
-                                                              value: settingValue
-                                                                  .country
-                                                                  .value,
-                                                          }
+                                                            label: settingValue
+                                                                .country
+                                                                .label,
+                                                            value: settingValue
+                                                                .country
+                                                                .value,
+                                                        }
                                                         : ""
                                                 }
                                                 name="country"
@@ -1036,7 +1037,7 @@ const Settings = (props) => {
                                                 name="state"
                                                 value={
                                                     settingValue &&
-                                                    settingValue.state !== null
+                                                        settingValue.state !== null
                                                         ? settingValue.state
                                                         : ""
                                                 }
@@ -1110,7 +1111,7 @@ const Settings = (props) => {
                                                 defaultValue={
                                                     settings
                                                         ? settings.attributes &&
-                                                          settingValue.date_format
+                                                        settingValue.date_format
                                                         : ""
                                                 }
                                                 data={dateFormatOptions}
